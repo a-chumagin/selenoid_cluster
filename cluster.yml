@@ -13,24 +13,24 @@
     - selenoid
   vars:
     - telegraf: true
-    - selenoid_url: "http://selenoid-node.mydev.com"
-    - influxdb_url: "http://selenoid-ui.mydev.com"
+    - selenoid_url: "http://localhost"
+    - influxdb_url: "http://localhost"
     - influxdb_port: 8086
     - selenoid_browsers:
       - name: "chrome"
-        default: "74.0"
+        default: "78.0"
         versions:
-          - "74.0"
+          - "78.0"
       - name: "firefox"
-        default:  "67.0"
+        default:  "70.0"
         versions:
-          - "67.0"
+          - "70.0"
 
 - name: Setup selenoid-ui
   gather_facts: no
   hosts: selenoid-ui
   vars:
-    - selenoid_url: "http://selenoid-ui.mydev.com"
+    - selenoid_url: "http://localhost"
     - selenoid_ui_port: 8081
   roles:
     - selenoid-ui
