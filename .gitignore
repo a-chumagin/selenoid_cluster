@@ -5,3 +5,4 @@ TODO.txt
 .envrc
 *.swp
 *~
+.DS_Store
